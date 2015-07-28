@@ -7,10 +7,7 @@
 .. description: 
 .. type: text
 
-Adónde?
-=======
-
-Realmente no se pero vamos.
+Adónde? Realmente no se pero vamos.
 
 La idea de este blog es ir comentando resumidamente, un poco de los mini proyectos que voy realizando semanal/mensualmente, con la idea de que el conocimiento que voy obteniendo no se vaya perdiendo (no se me vaya perdiendo). 
 
