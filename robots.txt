@@ -1,2 +1,2 @@
-Sitemap: https://example.com/sitemapindex.xml
+Sitemap: http://santiavenda2.github.io/sitemapindex.xml
 
