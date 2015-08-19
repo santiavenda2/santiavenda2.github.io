@@ -19,7 +19,19 @@
  </url>
  <url>
   <loc>http://santiavenda2.github.io/categories/</loc>
-  <lastmod>2015-07-27</lastmod>
+  <lastmod>2015-08-18</lastmod>
+ </url>
+ <url>
+  <loc>http://santiavenda2.github.io/categories/blog/</loc>
+  <lastmod>2015-08-18</lastmod>
+ </url>
+ <url>
+  <loc>http://santiavenda2.github.io/categories/nikola/</loc>
+  <lastmod>2015-08-18</lastmod>
+ </url>
+ <url>
+  <loc>http://santiavenda2.github.io/categories/rst/</loc>
+  <lastmod>2015-08-18</lastmod>
  </url>
  <url>
   <loc>http://santiavenda2.github.io/galleries/</loc>
@@ -34,7 +46,7 @@
   <lastmod>2015-07-27</lastmod>
  </url>
  <url>
-  <loc>http://santiavenda2.github.io/stories/pagina-de-prueba/</loc>
-  <lastmod>2015-07-31</lastmod>
+  <loc>http://santiavenda2.github.io/posts/como-vamos/</loc>
+  <lastmod>2015-08-18</lastmod>
  </url>
 </urlset>
