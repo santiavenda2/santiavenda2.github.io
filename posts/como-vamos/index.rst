@@ -7,9 +7,11 @@
 .. description: 
 .. type: text
 
-Hoy quería hablar de la herramienta que uso para generar este blog. En realidad, son varias herramientas, pero la principal es Nikola.
+Hoy quería hablar de la herramienta que uso para generar este blog. En realidad, son varias herramientas, pero la principal es Nikola_. 
 
-Nikola_ es un generador de sitios estáticos, como este blog, donde los contenidos no se van actualizando dinámicamente, sino que son más bien estables y no sufren muchas modificaciones. Perfecto, la herramienta ideal para escribir mis ideas y publicarlas en la web en forma rápida y sencilla.
+.. TEASER_END: Seguir leyendo
+
+Nikola es un generador de sitios estáticos, como este blog, donde los contenidos no se van actualizando dinámicamente, sino que son más bien estables y no sufren muchas modificaciones. Perfecto, la herramienta ideal para escribir mis ideas y publicarlas en la web en forma rápida y sencilla.
 
 Mi recomendación, tal cómo lo dice su autor [#]_ es que instalen Nikola y empiecen a jugar. Es muy simple e intuitiva de usar, pero si aún necesitan algo para leer les dejo el link de `Nikola handbook`_ que es corto, simple y tiene varios tips importantes para tener en cuenta.
 
