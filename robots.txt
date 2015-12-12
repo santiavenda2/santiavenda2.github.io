@@ -1,2 +1,4 @@
 Sitemap: http://santiavenda2.github.io/sitemapindex.xml
 
+User-Agent: *
+Host: santiavenda2.github.io

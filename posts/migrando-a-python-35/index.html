@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article# " lang="en">
+<head>
+<meta charset="utf-8">
+<base href="http://santiavenda2.github.io/posts/migrando-a-python-35/">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Migrando a python 3(.5) | lamotitodepython</title>
+<link href="../../assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+<link href="../../assets/css/rst.css" rel="stylesheet" type="text/css">
+<link href="../../assets/css/code.css" rel="stylesheet" type="text/css">
+<link href="../../assets/css/colorbox.css" rel="stylesheet" type="text/css">
+<link href="../../assets/css/theme.css" rel="stylesheet" type="text/css">
+<meta content="#5670d4" name="theme-color">
+<link rel="alternate" type="application/rss+xml" title="RSS" href="../../rss.xml">
+<link rel="canonical" href="http://santiavenda2.github.io/posts/migrando-a-python-35/">
+<!--[if lt IE 9]><script src="../../assets/js/html5.js"></script><![endif]--><meta name="author" content="Santiago Avendaño">
+<link rel="prev" href="../como-vamos/" title="Cómo vamos?" type="text/html">
+<meta property="og:site_name" content="lamotitodepython">
+<meta property="og:title" content="Migrando a python 3(.5)">
+<meta property="og:url" content="http://santiavenda2.github.io/posts/migrando-a-python-35/">
+<meta property="og:description" content='Hoy me levanté con ganas de migrar "todos" mis scripts a Python 3.5.
+
+La idea es hacerlo como siempre, prueba y error hasta que el script funcione, leyendo y aprendiendo sobre los errores que vayan su'>
+<meta property="og:type" content="article">
+<meta property="article:published_time" content="2015-12-12T11:26:15-03:00">
+</head>
+<body>
+<a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
+
+<!-- Menubar -->
+
+<nav class="navbar navbar-inverse navbar-static-top"><div class="container">
+<!-- This keeps the margins nice -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-navbar" aria-controls="bs-navbar" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="http://santiavenda2.github.io/">
+
+                <span id="blog-title">lamotitodepython</span>
+            </a>
+        </div>
+<!-- /.navbar-header -->
+        <div class="collapse navbar-collapse" id="bs-navbar" aria-expanded="false">
+            <ul class="nav navbar-nav">
+<li>
+<a href="../../archive.html">Archive</a>
+                </li>
+<li>
+<a href="../../categories/">Tags</a>
+                </li>
+<li>
+<a href="../../rss.xml">RSS feed</a>
+
+                
+            </li>
+</ul>
+<ul class="nav navbar-nav navbar-right">
+<li>
+    <a href="index.rst" id="sourcelink">Source</a>
+    </li>
+
+                
+            </ul>
+</div>
+<!-- /.navbar-collapse -->
+    </div>
+<!-- /.container -->
+</nav><!-- End of Menubar --><div class="container" id="content" role="main">
+    <div class="body-content">
+        <!--Body content-->
+        <div class="row">
+            
+            
+<article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title" itemprop="headline name"><a href="." class="u-url">Migrando a python 3(.5)</a></h1>
+
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn">
+                    Santiago Avendaño
+            </span></p>
+            <p class="dateline"><a href="." rel="bookmark"><time class="published dt-published" datetime="2015-12-12T11:26:15-03:00" itemprop="datePublished" title="2015-12-12 11:26">2015-12-12 11:26</time></a></p>
+                <p class="commentline">
+        
+</p>
+<div class="g-commentcount" data-href="/posts/migrando-a-python-35/"></div>
+<script src="https://apis.google.com/js/plusone.js"></script><p class="sourceline"><a href="index.rst" id="sourcelink">Source</a></p>
+
+        </div>
+        
+
+    </header><div class="e-content entry-content" itemprop="articleBody text">
+    <div>
+<p>Hoy me levanté con ganas de migrar "todos" mis scripts a Python 3.5.</p>
+<!-- TEASER_END: Seguir leyendo -->
+<p>La idea es hacerlo como siempre, prueba y error hasta que el script funcione, leyendo y aprendiendo sobre los errores que vayan sucediendo.</p>
+<p>Primero lo primero, instalar Python 3.5 (en mi ubuntu 14.04) y luego crear un virtualenv usando esta versión</p>
+<div class="section" id="instalar-python-3-5">
+<h2>Instalar Python 3.5</h2>
+<pre class="code bash"><a name="rest_code_afc602530ee44dccaae104217613ed92-1"></a><span class="nv">$ </span>sudo add-apt-repository ppa:fkrull/deadsnakes
+<a name="rest_code_afc602530ee44dccaae104217613ed92-2"></a><span class="nv">$ </span>sudo apt-get update
+<a name="rest_code_afc602530ee44dccaae104217613ed92-3"></a><span class="nv">$ </span>sudo apt-get install python3.5 python3.5-dev
+</pre>
+<p>Python 3.5-dev nos permitirá instalar paquetes con setuptools además de otras cosas.</p>
+<p>Luego de esto, podemos ejecutar el interprete de python 3.5 con los comandos:</p>
+<pre class="code bash"><a name="rest_code_d43ec1e0ebca4a2a96311bf027ded076-1"></a><span class="nv">$ </span>python3.5
+<a name="rest_code_d43ec1e0ebca4a2a96311bf027ded076-2"></a>Python 3.5.0 <span class="o">(</span>default, Sep <span class="m">17</span> 2015, 00:00:00<span class="o">)</span>
+<a name="rest_code_d43ec1e0ebca4a2a96311bf027ded076-3"></a><span class="o">[</span>GCC 4.8.4<span class="o">]</span> on linux
+<a name="rest_code_d43ec1e0ebca4a2a96311bf027ded076-4"></a>Type <span class="s2">"help"</span>, <span class="s2">"copyright"</span>, <span class="s2">"credits"</span> or <span class="s2">"license"</span> <span class="k">for</span> more information.
+<a name="rest_code_d43ec1e0ebca4a2a96311bf027ded076-5"></a>&gt;&gt;&gt;
+</pre>
+<p>Tener en cuenta que (al menos en ubuntu 14.04) ya tenemos los ejecutables: python y python3, que están apuntando a python2.7 y python3.4, respectivamente. No es conveniente cambiar estos links ya que de ellos dependen muchas funciones del sistema.</p>
+<div class="section" id="crear-virtualenv">
+<h3>Crear virtualenv</h3>
+<p>Lo último que falta es poder crear una environment con python 3.5. En mi caso, uso virtualenwrapper para organizar mis environments.</p>
+<pre class="code bash"><a name="rest_code_29ff681e93db4d439a77e16064830228-1"></a><span class="nv">$ </span>mkvirtualenv --python<span class="o">=</span><span class="sb">`</span>which python3.5<span class="sb">`</span> python3.5_env
+</pre>
+<p>Con el argumento --python le indicamos la ruta absoluta al interprete de python que queremos usar en el environment.</p>
+<p>Y eso es todo, ya podemos trabajar con python 3.5 dentro de este environment. En los siguientes posts iré comentando pormenores de esta migración.</p>
+</div>
+</div>
+</div>
+    </div>
+    <aside class="postpromonav"><nav><ul class="pager hidden-print">
+<li class="previous">
+                <a href="../como-vamos/" rel="prev" title="Cómo vamos?">Previous post</a>
+            </li>
+        </ul></nav></aside><section class="comments hidden-print"><h2>Comments</h2>
+        
+        
+<script src="https://apis.google.com/js/plusone.js"></script><div class="g-comments" data-href="http://santiavenda2.github.io/posts/migrando-a-python-35/" data-first_party_property="BLOGGER" data-view_type="FILTERED_POSTMOD">
+</div>
+
+
+        </section></article>
+</div>
+        <!--End of body content-->
+
+        <footer id="footer">
+            Contents © 2015         <a href="mailto:santiavenda2@gmail.com">Santiago Avendaño</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>         
+            
+        </footer>
+</div>
+</div>
+
+
+            <script src="../../assets/js/jquery.min.js"></script><script src="../../assets/js/bootstrap.min.js"></script><script src="../../assets/js/moment-with-locales.min.js"></script><script src="../../assets/js/fancydates.js"></script><script src="../../assets/js/jquery.colorbox-min.js"></script><script>$('a.image-reference:not(.islink) img:not(.islink)').parent().colorbox({rel:"gal",maxWidth:"100%",maxHeight:"100%",scalePhotos:true});</script><!-- fancy dates --><script>
+    moment.locale("en");
+    fancydates(0, "YYYY-MM-DD HH:mm");
+    </script><!-- end fancy dates -->
+</body>
+</html>
