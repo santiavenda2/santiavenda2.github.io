@@ -52,7 +52,7 @@ Con el argumento --python le indicamos la ruta absoluta al interprete de python 
 Y eso es todo, ya podemos trabajar con python 3.5 dentro de este environment. En los siguientes posts iré comentando pormenores de esta migración.
 
 
-PD: Nikola_ la herramienta que uso para armar este blog está migrando a Python 3 dejando de dar soporte a Python 2 en su próximo mayor release [#]_ , otro gran motivo para hacer esta migración.
+PD: Nikola_ la herramienta que uso para armar este blog está migrando a Python 3 dejando de dar soporte a Python 2 en su próximo major release [#]_ , otro gran motivo para hacer esta migración.
 
 .. _Nikola: https://getnikola.com/
 .. [#] https://getnikola.com/blog/env-survey-results-and-the-future-of-python-27.html
