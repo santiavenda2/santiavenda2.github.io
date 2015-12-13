@@ -52,7 +52,12 @@ Con el argumento --python le indicamos la ruta absoluta al interprete de python 
 Y eso es todo, ya podemos trabajar con python 3.5 dentro de este environment. En los siguientes posts iré comentando pormenores de esta migración.
 
 
-PD: Nikola_ la herramienta que uso para armar este blog está migrando a Python 3 dejando de dar soporte a Python 2 en su próximo major release [#]_ , otro gran motivo para hacer esta migración.
+-----------
+
+Update 1: Nikola_ la herramienta que uso para armar este blog está migrando a Python 3 dejando de dar soporte a Python 2 en su próximo major release [#]_ , otro gran motivo para hacer esta migración.
+
+Update 2: en esta página [#]_ podrán encontrar la lista de librerías que soportan Python 3 (y las que no). Por suerte son cada vez menos las que no lo hacen
 
 .. _Nikola: https://getnikola.com/
 .. [#] https://getnikola.com/blog/env-survey-results-and-the-future-of-python-27.html
+.. [#] https://python3wos.appspot.com/

@@ -100,28 +100,30 @@ La idea es hacerlo como siempre, prueba y error hasta que el script funcione, le
 <p>Primero lo primero, instalar Python 3.5 (en mi ubuntu 14.04) y luego crear un virtualenv usando esta versión</p>
 <div class="section" id="instalar-python-3-5">
 <h2>Instalar Python 3.5</h2>
-<pre class="code bash"><a name="rest_code_bd6d0b798f174e0789505dd22764bd61-1"></a><span class="nv">$ </span>sudo add-apt-repository ppa:fkrull/deadsnakes
-<a name="rest_code_bd6d0b798f174e0789505dd22764bd61-2"></a><span class="nv">$ </span>sudo apt-get update
-<a name="rest_code_bd6d0b798f174e0789505dd22764bd61-3"></a><span class="nv">$ </span>sudo apt-get install python3.5 python3.5-dev
+<pre class="code bash"><a name="rest_code_9eb8eb8aa07e4c11b6d8eb1ccd968f9a-1"></a><span class="nv">$ </span>sudo add-apt-repository ppa:fkrull/deadsnakes
+<a name="rest_code_9eb8eb8aa07e4c11b6d8eb1ccd968f9a-2"></a><span class="nv">$ </span>sudo apt-get update
+<a name="rest_code_9eb8eb8aa07e4c11b6d8eb1ccd968f9a-3"></a><span class="nv">$ </span>sudo apt-get install python3.5 python3.5-dev
 </pre>
 <p>Python 3.5-dev nos permitirá instalar paquetes con setuptools además de otras cosas.</p>
 <p>Luego de esto, podemos ejecutar el intérprete de python 3.5 con los comandos:</p>
-<pre class="code bash"><a name="rest_code_0e6091e136944dd3ba53162c6f02f3ad-1"></a><span class="nv">$ </span>python3.5
-<a name="rest_code_0e6091e136944dd3ba53162c6f02f3ad-2"></a>Python 3.5.0 <span class="o">(</span>default, Sep <span class="m">17</span> 2015, 00:00:00<span class="o">)</span>
-<a name="rest_code_0e6091e136944dd3ba53162c6f02f3ad-3"></a><span class="o">[</span>GCC 4.8.4<span class="o">]</span> on linux
-<a name="rest_code_0e6091e136944dd3ba53162c6f02f3ad-4"></a>Type <span class="s2">"help"</span>, <span class="s2">"copyright"</span>, <span class="s2">"credits"</span> or <span class="s2">"license"</span> <span class="k">for</span> more information.
-<a name="rest_code_0e6091e136944dd3ba53162c6f02f3ad-5"></a>&gt;&gt;&gt;
+<pre class="code bash"><a name="rest_code_eb1f11b5a12c4b7e9c60fe7bc2e29b03-1"></a><span class="nv">$ </span>python3.5
+<a name="rest_code_eb1f11b5a12c4b7e9c60fe7bc2e29b03-2"></a>Python 3.5.0 <span class="o">(</span>default, Sep <span class="m">17</span> 2015, 00:00:00<span class="o">)</span>
+<a name="rest_code_eb1f11b5a12c4b7e9c60fe7bc2e29b03-3"></a><span class="o">[</span>GCC 4.8.4<span class="o">]</span> on linux
+<a name="rest_code_eb1f11b5a12c4b7e9c60fe7bc2e29b03-4"></a>Type <span class="s2">"help"</span>, <span class="s2">"copyright"</span>, <span class="s2">"credits"</span> or <span class="s2">"license"</span> <span class="k">for</span> more information.
+<a name="rest_code_eb1f11b5a12c4b7e9c60fe7bc2e29b03-5"></a>&gt;&gt;&gt;
 </pre>
 <p>Tener en cuenta que (al menos en ubuntu 14.04) ya tenemos los ejecutables: python y python3, que están apuntando a python2.7 y python3.4, respectivamente. No es conveniente cambiar estos links ya que de ellos dependen muchas funciones del sistema.</p>
 <div class="section" id="crear-virtualenv">
 <h3>Crear virtualenv</h3>
 <p>Lo último que falta es poder crear una environment con python 3.5. En mi caso, uso virtualenwrapper para organizar mis environments.</p>
-<pre class="code bash"><a name="rest_code_a914444dcdd1478fb9aa1f2c4a1d8870-1"></a><span class="nv">$ </span>mkvirtualenv --python<span class="o">=</span><span class="sb">`</span>which python3.5<span class="sb">`</span> python3.5_env
+<pre class="code bash"><a name="rest_code_e4103e485de846bd9b595d9396f50932-1"></a><span class="nv">$ </span>mkvirtualenv --python<span class="o">=</span><span class="sb">`</span>which python3.5<span class="sb">`</span> python3.5_env
 </pre>
 <p>Con el argumento --python le indicamos la ruta absoluta al interprete de python que queremos usar en el environment.</p>
 <p>Y eso es todo, ya podemos trabajar con python 3.5 dentro de este environment. En los siguientes posts iré comentando pormenores de esta migración.</p>
-<p>PD: <a class="reference external" href="https://getnikola.com/">Nikola</a> la herramienta que uso para armar este blog está migrando a Python 3 dejando de dar soporte a Python 2 en su próximo major release <a class="footnote-reference" href=".#id2" id="id1">[1]</a> , otro gran motivo para hacer esta migración.</p>
-<table class="docutils footnote" frame="void" id="id2" rules="none">
+<hr class="docutils">
+<p>Update 1: <a class="reference external" href="https://getnikola.com/">Nikola</a> la herramienta que uso para armar este blog está migrando a Python 3 dejando de dar soporte a Python 2 en su próximo major release <a class="footnote-reference" href=".#id3" id="id1">[1]</a> , otro gran motivo para hacer esta migración.</p>
+<p>Update 2: en esta página <a class="footnote-reference" href=".#id4" id="id2">[2]</a> podrán encontrar la lista de librerías que soportan Python 3 (y las que no). Por suerte son cada vez menos las que no lo hacen</p>
+<table class="docutils footnote" frame="void" id="id3" rules="none">
 <colgroup>
 <col class="label">
 <col>
@@ -129,6 +131,16 @@ La idea es hacerlo como siempre, prueba y error hasta que el script funcione, le
 <tbody valign="top"><tr>
 <td class="label"><a class="fn-backref" href=".#id1">[1]</a></td>
 <td><a class="reference external" href="https://getnikola.com/blog/env-survey-results-and-the-future-of-python-27.html">https://getnikola.com/blog/env-survey-results-and-the-future-of-python-27.html</a></td>
+</tr></tbody>
+</table>
+<table class="docutils footnote" frame="void" id="id4" rules="none">
+<colgroup>
+<col class="label">
+<col>
+</colgroup>
+<tbody valign="top"><tr>
+<td class="label"><a class="fn-backref" href=".#id2">[2]</a></td>
+<td><a class="reference external" href="https://python3wos.appspot.com/">https://python3wos.appspot.com/</a></td>
 </tr></tbody>
 </table>
 </div>
